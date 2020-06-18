@@ -489,6 +489,22 @@
           "productVersion": "$(5.0-RuntimeVersion)",
           "platforms": [
             {
+              "architecture": "arm",
+              "dockerfile": "src/runtime-deps/5.0/focal/arm32v7",
+              "os": "linux",
+              "osVersion": "focal",
+              "tags": {
+                "$(5.0-RuntimeVersion)-focal-arm32v7": {},
+                "5.0-focal-arm32v7": {}
+              },
+              "variant": "v7"
+            }
+          ]
+        },
+        {
+          "productVersion": "$(5.0-RuntimeVersion)",
+          "platforms": [
+            {
               "architecture": "arm64",
               "dockerfile": "src/runtime-deps/5.0/focal/arm64v8",
               "os": "linux",
@@ -1093,6 +1109,25 @@
                 "$(5.0-RuntimeVersion)-focal": {},
                 "5.0-focal": {}
               }
+            }
+          ]
+        },
+        {
+          "productVersion": "$(5.0-RuntimeVersion)",
+          "platforms": [
+            {
+              "architecture": "arm",
+              "buildArgs": {
+                "REPO": "$(Repo:runtime-deps)"
+              },
+              "dockerfile": "src/runtime/5.0/focal/arm32v7",
+              "os": "linux",
+              "osVersion": "focal",
+              "tags": {
+                "$(5.0-RuntimeVersion)-focal-arm32v7": {},
+                "5.0-focal-arm32v7": {}
+              },
+              "variant": "v7"
             }
           ]
         },
@@ -1738,6 +1773,25 @@
           "productVersion": "$(5.0-RuntimeVersion)",
           "platforms": [
             {
+              "architecture": "arm",
+              "buildArgs": {
+                "REPO": "$(Repo:runtime)"
+              },
+              "dockerfile": "src/aspnet/5.0/focal/arm32v7",
+              "os": "linux",
+              "osVersion": "focal",
+              "tags": {
+                "$(5.0-RuntimeVersion)-focal-arm32v7": {},
+                "5.0-focal-arm32v7": {}
+              },
+              "variant": "v7"
+            }
+          ]
+        },
+        {
+          "productVersion": "$(5.0-RuntimeVersion)",
+          "platforms": [
+            {
               "architecture": "arm64",
               "buildArgs": {
                 "REPO": "$(Repo:runtime)"
@@ -2245,6 +2299,25 @@
                 "$(5.0-SdkVersion)-focal": {},
                 "5.0-focal": {}
               }
+            }
+          ]
+        },
+        {
+          "productVersion": "$(5.0-SdkVersion)",
+          "platforms": [
+            {
+              "buildArgs": {
+                "REPO": "$(Repo:aspnet)"
+              },
+              "architecture": "arm",
+              "dockerfile": "src/sdk/5.0/focal/arm32v7",
+              "os": "linux",
+              "osVersion": "focal",
+              "tags": {
+                "$(5.0-SdkVersion)-focal-arm32v7": {},
+                "5.0-focal-arm32v7": {}
+              },
+              "variant": "v7"
             }
           ]
         },
